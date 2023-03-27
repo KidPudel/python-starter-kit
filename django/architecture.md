@@ -1,4 +1,4 @@
-django uses MTV pattern it is essentially:
+django uses MTV, pattern it is essentially:
 - `Model`
 - `Template`
 - `View`
