@@ -1,3 +1,16 @@
+# Check if django is installed
+```bash
+python -m django --version
+```
+# Create an environment "project"
+```bash
+django-admin startproject mysite
+```
+This creates a project "mysite".
+Project is just an environment, _we haven't actually created an application_ (views or logic of our app).  
+
+**_So far this step created an environment where the application is going to be hosted_**.
+
 ```
 projectname/
     manage.py
@@ -19,3 +32,19 @@ These files are:
 - `projectname/urls.py`: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
 - `projectname/asgi.py`: An entry-point for ASGI-compatible web servers to serve your project.
 - `projectname/wsgi.py`: An entry-point for WSGI-compatible web servers to serve your project.
+
+# Run the project
+```bash
+python manager.py runserver
+```
+also, probably you would need to migrate
+```bash
+python manager.py migrate
+```
+that would fix the issues of "unapplied migrations"
+
+
+# Create an application
+```bash
+python manager.py startapp 
+```
