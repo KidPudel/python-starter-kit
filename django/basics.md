@@ -79,7 +79,7 @@ from django.http import HttpResponse
 # Note that the function takes one argument, which is the request object. 
 # This is required for all Django view functions.
 def index(request):
-    // with header to spice things up
+    # with header to spice things up
     return HttpResponse("<h1>Hello django !! ✌️✌️</h1>")
 
 ```
