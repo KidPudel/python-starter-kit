@@ -109,3 +109,6 @@ urlpatterns = [
 - `include()` is to make it easier to "plug-and-play" URLs
 
 Since `porfolio` in its own URLconf (`porfolio/urls.py`), the can be placed under `/portfolio/`, `/portfolio_fun/`, `content/portfolio/`, or any other path, the app will still work.
+
+### When to use **include()**
+You should always use include to point root URLconf to (include other URL pattens), the only exception is `admin.site.urls`
