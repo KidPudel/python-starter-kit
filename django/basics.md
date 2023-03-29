@@ -119,4 +119,5 @@ You should always use include to point root URLconf to (include other URL patten
 
 # Result
 And finally we have our first page in django showed up as expected.  
+
 ![image](https://user-images.githubusercontent.com/63263301/228608488-f9d46e8e-1b14-4be1-bdab-7851dc4190cc.png)
