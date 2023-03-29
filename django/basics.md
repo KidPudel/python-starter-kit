@@ -94,7 +94,8 @@ urlpatterns = [
 ]
 ```
 
-3. Now we've mapped it, but to actually reach that url, we need to connect or point root URLconf to app's one, or simpy put "link our app to the project"
+3. Now we've mapped it, but to actually reach that url, we need to connect or point root URLconf to app's one,   
+   _or simpy put "**link our app to the project**"_
 
 ```python
 from django.contrib import admin
