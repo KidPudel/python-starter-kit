@@ -44,7 +44,29 @@ python manager.py migrate
 that would fix the issues of "unapplied migrations"
 
 
+## But wait, what is actually the difference between project and application?
+
+_An **app is a web application that does something** – e.g., a blog system, a database of public records or a small poll app_. _A **project is a collection of configuration and apps** for a particular website_. A project can contain multiple apps. An app can be in multiple projects.  
+
+
+
 # Create an application
+now that we have our environment setted up, it's time to actually create an application
 ```bash
-python manager.py startapp 
+python manager.py startapp myapp
 ```
+
+this will generate `myapp` application with the following structure:   
+```bash
+myapp/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```
+
+# Create your first view
