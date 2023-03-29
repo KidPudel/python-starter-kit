@@ -70,7 +70,7 @@ myapp/
 ```
 
 # Create your first [view](https://github.com/KidPudel/python-starter-kit/blob/main/django/architecture.md)
-1. First step is to actually create a view, right? You can do this in `view.py`
+1. **First step is to actually create a view, right? You can do this in `view.py`**
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -83,8 +83,8 @@ def index(request):
     return HttpResponse("<h1>Hello django !! ✌️✌️</h1>")
 
 ```
-2. So with our the most basic view is created, how we can access it? by calling it!
-   To call a view we need to map it to the path/url, this is done in URLconf/`urls.py` (create it)
+2. **So with our the most basic view is created, how we can access it? by calling it!
+   To call a view we need to map it to the path/url, this is done in URLconf/`urls.py`** (create it)
 ```python
 from django.urls import path
 from . import views
@@ -94,8 +94,8 @@ urlpatterns = [
 ]
 ```
 
-3. Now we've mapped it, but to actually reach that url, we need to connect or point root URLconf to app's one,   
-   _or simpy put "**link our app to the project**"_
+3. **Now we've mapped it, but to actually reach that url, we need to "register/link" our app in the root/project's URLconf** (we need to connect or point root URLconf to app's one, 
+   _or simpy put "**link our app to the project**"_)
 
 ```python
 from django.contrib import admin
@@ -110,7 +110,9 @@ urlpatterns = [
 
 ```
 - function `include()` allows referencing other URLconfs
-- when Django encounter `include()` it chops off url path that matches up to that point, and sends the remaining string to the included URLconf.
+- when Django encounter `include()` it chops off url path that matches up to that point (`/portfolio`), and sends the remaining string to the included URLconf.
+  > For example: we have https:/address:port`/portfolio`/`myprojects`
+  it will chop off the path (path is strarting from `/portfolio`) and it will be redirected to the app's URLconf with `/myprojects` and will be navigated to that route
 - `include()` is to make it easier to "plug-and-play" URLs
 
 Since `porfolio` in its own URLconf (`porfolio/urls.py`), the can be placed under `/portfolio/`, `/portfolio_fun/`, `content/portfolio/`, or any other path, the app will still work.
