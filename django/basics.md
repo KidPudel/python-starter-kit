@@ -79,7 +79,8 @@ from django.http import HttpResponse
 # Note that the function takes one argument, which is the request object. 
 # This is required for all Django view functions.
 def index(request):
-    return HttpResponse("Hello django !! ✌️✌️")
+    // with header to spice things up
+    return HttpResponse("<h1>Hello django !! ✌️✌️</h1>")
 
 ```
 2. So with our the most basic view is created, how we can access it? by calling it!
@@ -113,5 +114,9 @@ urlpatterns = [
 
 Since `porfolio` in its own URLconf (`porfolio/urls.py`), the can be placed under `/portfolio/`, `/portfolio_fun/`, `content/portfolio/`, or any other path, the app will still work.
 
-### When to use **include()**
+### When to use **include()**?
 You should always use include to point root URLconf to (include other URL pattens), the only exception is `admin.site.urls`
+
+# Result
+And finally we have our first page in django showed up as expected.
+![image](https://user-images.githubusercontent.com/63263301/228608488-f9d46e8e-1b14-4be1-bdab-7851dc4190cc.png)
