@@ -76,8 +76,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def index():
+# Note that the function takes one argument, which is the request object. 
+# This is required for all Django view functions.
+def index(request):
     return HttpResponse("Hello django !! ✌️✌️")
+
 ```
 2. So with our the most basic view is created, how we can access it? by calling it!
    To call a view we need to map it to the path/url, this is done in URLconf/`urls.py` (create it)
