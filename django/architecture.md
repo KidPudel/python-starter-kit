@@ -3,6 +3,12 @@ django uses MTV, pattern it is essentially:
 - `Template`
 - `View`
 
+# Why MTV??
+> In our interpretation of MVC, the “view” **_describes the data that gets presented to the user. It’s not necessarily how the data looks, but which data is presented_**. The view describes which data you see, not how you see it. It’s a subtle distinction.
+So, in our case, a “view” is the Python callback function for a particular URL, because that callback function describes which data is presented.
+
+> Furthermore, it’s sensible to separate content from presentation – which is where templates come in. In Django, a “view” describes which data is presented, but a view normally delegates to a template, which describes how the data is presented.
+
 # MVC
 Compared to MVC:
 - `Template` is just a `View`
